@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Whether Forecast</title>
+    <style>
+    body{
+    background-image:url("W2.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    }
+    table,th,td{
+      border:2px solid yellow;
+      text-align:center;
+      color:white;
+      background-color:black;
+    }
+    table{
+      margi-left:10%;
+      margin-right:10%;
+    }
+    footer{
+      background-color:#FF1B1C;
+    }
+    b{
+      color:white;
+      text-align:center;
+      margin-left:5%;
+    }
+    </style>
+  <script src="https://kit.fontawesome.com/43290fa92d.
+js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><i class="fa-duotone fa-solid fa-cloud  text-primary"></i> Weather</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="know.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="out.html">Contact us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search city" placeholder="Search" aria-label="Search" id="target">
+      <button type="button" id="sam" class="btn btn-primary my-2">Search</button>
+    </form>
+    <div class="container my-2">
+    <div class="card my-2" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-info">Temperature</h5>
+     <p class="card-text">The temperature is <span id="t"> </span></p>
+    <p class="card-text">The min temperature is <span id="mat"> </span></p>
+    <p class="card-text">Thr max temperature is <span id="mit"> </span></p>
+  </div>
+</div>
+
+<div class="card text-center my-2" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-info">Other parameters</h5>
+    <p class="card-text">The feels_like temp is <span id="f"></span></p>
+    <p class="card-text">The Humidity is <span id="h"></span></p>
+    <p class="card-text">The pressure is <span id="pr"></span></p>
+  </div>
+</div>
+<div class="card text-right my-2" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-info">Wind</h5>
+     <p class="card-text">The wind speed is <span id="s"></span></p>
+    <p class="card-text">The degree of wind is <span id="de"></span></p>
+  </div>
+</div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12">
+    <div class="card" style="width: 18rem;">
+  <img src="S.jpeg" class="card-img-top img-fluid"  alt="Switzerland">
+  <div class="card-body">
+    <h5 class="card-title text-danger">Switzerlands Seasonal Splendor</h5>
+    <p class="card-text">Switzerlands weather varies dramatically with the seasons, from snowy winters perfect for skiing.</p>
+    <a href="https://www.climatestotravel.com/climate/switzerland" class="btn btn-primary">Read more</a>
+  </div>
+    </div>
+        </div>
+        <div class="col-lg-6 col-12">
+  <div class="card my-2" style="width: 18rem;">
+  <img src="M.jpeg" class="card-img-top img-fluid" alt="Maldives">
+  <div class="card-body">
+    <h5 class="card-title text-danger">Maldives</h5>
+    <p class="card-text">The Maldives experiences a tropical climate with warm temperatures and high humidity year-round. The dry season, from November to April.</p>
+    <a href="https://public.wmo.int/en/resources/library/climate-and-weather-male-maldives" class="btn btn-primary">Read more</a>
+  </div>
+  </div>
+        </div>
+        <div class="col-lg-6 col-12">
+  <div class="card my-2" style="width: 18rem;">
+  <img src="Ma.jpeg" class="card-img-top img-fluid" alt=".">
+  <div class="card-body">
+    <h5 class="card-title text-danger">Manali</h5>
+    <p class="card-text">Manali experiences a cool, temperate climate, with mild summers and snowy winters. Temperatures range from 10°C to 25°C in summer and drop below freezing in winter.</p>
+    <a href="https://weather.com/en-IN/weather/today/l/INCA0016:1:IN" class="btn btn-primary">Read more</a>
+  </div>
+  </div>
+        </div>
+</div>
+    </div>
+  </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">city</th>
+      <th scope="col">Temperature</th>
+      <th scope="col">min_temp</th>
+      <th scope="col">max_temp</th>
+       <th scope="col">feels_like</th>
+      <th scope="col">Humidity</th>
+      <th scope="col">Pressure</th>
+       <th scope="col">wind_speed</th>
+      <th scope="col">Wind_degrees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>     
+      <td>Shanghai</td>
+      <div class="a">
+      <td class="a">Otto</td>
+      <td class="a">@mdo</td>
+      <td class="a">Mark</td>
+      <td class="a">Otto</td>
+      <td class="a">@mdo</td>
+      <td class="a">Mark</td>
+      <td class="a">Otto</td>
+      <td class="a">@mdo</td>
+      </div>
+    </tr>
+    <tr>
+      <td>Denmark</td>
+      <div class="b">
+      <td class="b">Thornton</td>
+      <td class="b">@fat</td>
+      <td class="b">Jacob</td>
+      <td class="b">Thornton</td>
+      <td class="b">@fat</td>
+      <td class="b">Jacob</td>
+      <td class="b">Thornton</td>
+      <td class="b">@fat</td>
+        </div>
+    </tr>
+    <tr>
+      
+      <td>London</td>
+      <div class="c">
+      <td class="c">the Bird</td>
+      <td class="c">@twitter</td>
+      <td class="c">Jacob</td>
+      <td class="c">Thornton</td>
+      <td class="c">@fat</td>
+      <td class="c">Jacob</td>
+      <td class="c">Thornton</td>
+      <td class="c">@fat</td>
+      </div>
+     
+    </tr>
+    <tr>
+      <td>Tokyo</td>
+      <div class="d">
+      <td class="d">the Bird</td>
+      <td class="d">@twitter</td>
+      <td class="d">Jacob</td>
+      <td class="d">Thornton</td>
+      <td class="d">@fat</td>
+      <td class="d">Jacob</td>
+      <td class="d">Thornton</td>
+      <td class="d">@fat</td>
+      </div>
+    </tr>
+  </tbody>
+</table>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+let tem=document.querySelector("#t");
+let min=document.querySelector("#mat");
+let max=document.querySelector("#mit");
+let fe=document.querySelector("#f");
+let hu=document.querySelector("#h");
+let pre=document.querySelector("#pr");
+let ws=document.querySelector("#s");
+let we=document.querySelector("#de");
+let sub=document.querySelector("#sam");
+let tar=document.querySelector("#target");
+let mum=document.querySelectorAll(".a");
+let dad=document.querySelectorAll(".b");
+let sis=document.querySelectorAll(".c");
+let bro=document.querySelectorAll(".d");
+const apiKey = "8416ce22ea32b50cded67f8194ec07a4";
+let apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+async function checkWeather(city){
+const response = await fetch(apiUrl +city + `&appid=${apiKey}`);
+var data = await response.json();
+console.log(data);
+tem.innerText=data.main.temp;
+min.innerText=data.main.temp_min;
+max.innerText=data.main.temp_max;
+fe.innerText=data.main.feels_like;
+hu.innerText=data.main.humidity;
+pre.innerText=data.main.pressure;
+ws.innerText=data.wind.speed;
+we.innerText=data.wind.deg;
+};
+let x="";
+sub.addEventListener("click",()=>{
+  x=tar.value;
+  checkWeather(x)
+});
+async function city1(city){
+const response = await fetch(apiUrl +city + `&appid=${apiKey}`);
+var data = await response.json();
+dad[0].innerText=data.main.temp;
+dad[1].innerText=data.main.temp_min;
+dad[2].innerText=data.main.temp_max;
+dad[3].innerText=data.main.feels_like;
+dad[4].innerText=data.main.humidity;
+dad[5].innerText=data.main.pressure;
+dad[7].innerText=data.wind.speed;
+dad[8].innerText=data.wind.deg;
+};
+city1("Denmark");
+
+async function city2(city){
+const response = await fetch(apiUrl +city + `&appid=${apiKey}`);
+var data = await response.json();
+mum[0].innerText=data.main.temp;
+mum[1].innerText=data.main.temp_min;
+mum[2].innerText=data.main.temp_max;
+mum[3].innerText=data.main.feels_like;
+mum[4].innerText=data.main.humidity;
+mum[5].innerText=data.main.pressure;
+mum[7].innerText=data.wind.speed;
+mum[8].innerText=data.wind.deg;
+};
+city2("Shanghai");
+async function city3(city){
+const response = await fetch(apiUrl +city + `&appid=${apiKey}`);
+var data = await response.json();
+sis[0].innerText=data.main.temp;
+sis[1].innerText=data.main.temp_min;
+sis[2].innerText=data.main.temp_max;
+sis[3].innerText=data.main.feels_like;
+sis[4].innerText=data.main.humidity;
+sis[5].innerText=data.main.pressure;
+sis[7].innerText=data.wind.speed;
+sis[8].innerText=data.wind.deg;
+};
+city3("London");
+async function city4(city){
+const response = await fetch(apiUrl +city + `&appid=${apiKey}`);
+var data = await response.json();
+bro[0].innerText=data.main.temp;
+bro[1].innerText=data.main.temp_min;
+bro[2].innerText=data.main.temp_max;
+bro[3].innerText=data.main.feels_like;
+bro[4].innerText=data.main.humidity;
+bro[5].innerText=data.main.pressure;
+bro[7].innerText=data.wind.speed;
+bro[8].innerText=data.wind.deg;
+};
+city4("Tokyo");
+</script>
+<footer>
+  <b>A Akram company 2023 Pvt.Ltd.All erites Reserved</b>
+</footer>
+  </body>
+</html>
